@@ -1,0 +1,40 @@
+/* STYLE REMINDER — 黑曜指揮台強化層：桌面端側欄必須像永久安裝的作戰帶，
+   系統印記與授權錨點在視野中持續可見；鈾光綠只服務於驗證與主要行動。 */
+
+/* Keep the operational band in normal layout flow so its physical presence anchors the whole console. */
+.terminal-app { display: flex; }
+.side-nav { position: sticky; top: 0; align-self: flex-start; flex: 0 0 264px; width: 264px; height: 100vh; background: linear-gradient(180deg, #0b1710, #050a07 72%); border-right-color: rgba(184,255,100,.25); box-shadow: 16px 0 60px rgba(0,0,0,.2); }
+.main-stage { min-width: 0; flex: 1; margin-left: 0; }
+.brand-lockup div { gap: 3px; }
+.brand-lockup strong { font-size: 15px; letter-spacing: .15em; }
+.nav-installation { margin: 25px 7px 0; padding: 12px 10px; display: grid; gap: 9px; border: 1px solid rgba(184,255,100,.2); border-left: 2px solid #b8ff64; background: linear-gradient(90deg, rgba(184,255,100,.09), rgba(184,255,100,.015)); }
+.nav-installation > div { display: flex; justify-content: space-between; align-items: baseline; gap: 7px; font-family: "IBM Plex Mono", monospace; }
+.nav-installation span { color: #6f8372; font-size: 7px; letter-spacing: .04em; }
+.nav-installation b { color: #c6d9c5; font-size: 8px; letter-spacing: .03em; text-align: right; }
+.nav-installation b.verified { color: #b8ff64; }
+.nav-caption { margin-top: 28px; }
+
+/* The hero carries its own installation seal and traceable authorization anchors. */
+.hero-installed-seal { width: 175px; padding: 9px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(184,255,100,.2); background: rgba(5,15,9,.57); }
+.hero-installed-seal img { width: 28px; height: 28px; object-fit: contain; }
+.hero-installed-seal div { display: grid; gap: 2px; text-align: left; font-family: "IBM Plex Mono", monospace; }
+.hero-installed-seal span, .hero-installed-seal small { color: #6d846f; font-size: 7px; letter-spacing: .05em; }
+.hero-installed-seal strong { color: #dfffc0; font-size: 10px; letter-spacing: .08em; }
+.hero-side-anchors { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(184,255,100,.16); }
+.hero-side-anchors div { padding: 7px; display: grid; gap: 3px; background: rgba(5,15,9,.75); text-align: left; font-family: "IBM Plex Mono", monospace; }
+.hero-side-anchors span { color: #758a77; font-size: 7px; }
+.hero-side-anchors b { color: #becfbe; font-size: 9px; }
+
+/* Dossier codes make the quick-access cards read as traceable operational modules. */
+.quick-card strong { margin-top: 1px; color: #d9e8d7; font-size: 13px; }
+.quick-card .quick-code { margin-top: 4px; color: currentColor; font: 8px "IBM Plex Mono", monospace; letter-spacing: .06em; }
+
+@media (max-width: 1120px) {
+  .side-nav { flex-basis: 232px; width: 232px; }
+}
+
+@media (max-width: 760px) {
+  .terminal-app { display: block; }
+  .side-nav { position: fixed; inset: 0 auto 0 0; height: 100vh; flex: none; }
+  .hero-side-data { transform: scale(.73); transform-origin: top right; }
+}

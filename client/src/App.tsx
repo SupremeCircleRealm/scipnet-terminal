@@ -1,3 +1,4 @@
+/* STYLE REMINDER — 黑曜指揮台：此入口固定啟用深色系統主題，讓全站維持受控工作台的低照度對比。 */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -27,7 +28,7 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider
-        defaultTheme="light"
+        defaultTheme="dark"
         // switchable
       >
         <TooltipProvider>
